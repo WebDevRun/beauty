@@ -1,0 +1,55 @@
+.sale {
+  background: $green url('../img/sale_bg_img.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10% 0;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  color: #ffffff;
+  max-width: 308px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 3em;
+  }
+
+  &__text {
+    font-size: 0.875em;
+    line-height: 20px;
+  }
+
+  &__button {
+    @include main_button;
+    background: $green;
+    border: 2px solid #ffffff;
+    color: inherit;
+  }
+}
+
+@media (max-width: 992px) {
+  .sale {
+    background-position: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .info {
+    max-width: 230px;
+  }
+}
+
+@media (max-width: 425px) {
+  .sale {
+    background-position: 55%;
+  }
+
+  .info {
+    max-width: 150px;
+  }
+}

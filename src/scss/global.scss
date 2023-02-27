@@ -1,0 +1,38 @@
+$gray: #c4c4c4;
+$light-gray: #efefef;
+$green: #66c05d;
+
+@mixin base {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+     font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  @include base;
+  max-width: 1110px;
+}
+
+@media (max-width: 992px) {
+  .container {
+    @include base;
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    @include base;
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    @include base;
+    width: 100%;
+  }
+}

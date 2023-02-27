@@ -1,0 +1,7 @@
+@import './base_button.scss';
+
+@mixin main-button {
+  @include button;
+  border-radius: 40px;
+  padding: 12px 27px;
+}

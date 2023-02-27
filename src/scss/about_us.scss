@@ -1,0 +1,103 @@
+.about-us {
+  margin-top: 100px;
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__subscribe,
+  &__our-shops {
+    flex: 1 0 45%;
+    display: flex;
+    background-color: $green;
+  }
+
+  &__subscribe {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 5%;
+      width: 140px;
+      height: 107px;
+      transform: translateY(-50%);
+      background: url('../img/mail.svg') center/contain no-repeat;
+    }
+  }
+
+  &__text {
+    flex: 1 1 0;
+    max-width: 250px;
+    margin: 35px auto 35px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  & h2 {
+    font-weight: 700;
+    font-size: 1.125em;
+    color: #ffffff;
+  }
+
+  & p {
+    font-size: 0.875em;
+    line-height: 20px;
+    color: #ffffff;
+  }
+
+  & input {
+    padding: 9px 25px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    border: none;
+    font-size: 0.875em;
+
+    &::placeholder {
+      color: #c4c4c4;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  & a {
+    @include small_button;
+    background: #66c05d;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-us {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us {
+    & .container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .about-us {
+    margin-top: 20px;
+
+    &__text {
+      margin: 15px auto 15px 15px;
+      gap: 10px;
+    }
+  }
+}
